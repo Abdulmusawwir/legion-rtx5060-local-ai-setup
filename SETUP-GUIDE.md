@@ -4,7 +4,7 @@ This guide walks you through setting up a private, offline AI coding assistant o
 
 ---
 
-## What You Need Before Starting
+## My Specs Before Starting
 
 - **Laptop:** Lenovo Legion (8GB RTX 5060 graphics card, AMD Ryzen 9 processor, 32GB system memory)
 - **Free Disk Space:** At least 35 GB of free space on your main drive
