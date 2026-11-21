@@ -1,0 +1,48 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "llamacpp/qwen3.6-35b-a3b",
+  "small_model": "llamacpp/qwen3.5-9b",
+  "permission": {
+    "subagent": "deny",
+    "task": "deny",
+    "question": "deny"
+  },
+  "compaction": {
+    "auto": true,
+    "buffer": 2048
+  },
+  "provider": {
+    "llamacpp": {
+      "name": "llama.cpp Local",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:8080/v1",
+        "apiKey": "sk-local-key"
+      },
+      "models": {
+        "qwen3.5-9b": {
+          "modelID": "qwen3.5-9b",
+          "name": "Qwen 3.5 9B (Fast VRAM)",
+          "attachment": false,
+          "reasoning": true,
+          "tool_call": true,
+          "limit": {
+            "context": 65536,
+            "output": 8192
+          }
+        },
+        "qwen3.6-35b-a3b": {
+          "modelID": "qwen3.6-35b-a3b",
+          "name": "Qwen 3.6 35B A3B (MoE + Vision)",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "limit": {
+            "context": 65536,
+            "output": 16384
+          }
+        }
+      }
+    }
+  }
+}
